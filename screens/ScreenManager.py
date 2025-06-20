@@ -12,6 +12,10 @@ class Screen(ABC):
         pass
 
     @abstractmethod
+    def draw(self, surface: py.Surface):
+        pass
+
+    @abstractmethod
     def destroy(self):
         pass
 
@@ -33,6 +37,10 @@ class ScreenManager:
         if self.currentScreen:
             self.currentScreen.processEvents(event)
 
-    def update(self):
+    def update(self, time_delta: int):
         if self.currentScreen:
-            self.currentScreen.update()
+            self.currentScreen.update(time_delta)
+
+    def draw(self, surface: py.Surface):
+        if self.currentScreen:
+            self.currentScreen.draw(surface)

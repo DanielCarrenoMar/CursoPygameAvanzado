@@ -19,7 +19,10 @@ class MainMenuScreen(Screen):
         if event.type == pyui.UI_BUTTON_PRESSED and event.ui_element == self.boton_ir_acerca:
             self.screenManager.show(ScreenList.GAME)
 
-    def update(self):
+    def update(self, time_delta: int):
+        pass
+
+    def draw(self, surface: py.Surface):
         pass
 
     def destroy(self):

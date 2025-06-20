@@ -10,7 +10,7 @@ class App:
     def __init__(self):
         py.init()
 
-        self.windows = py.display.set_mode((1024, 600))
+        self.windows = py.display.set_mode((1024, 600), py.RESIZABLE)
         py.display.set_caption('Curso Pygame Avanzado')
 
         self.clock = py.time.Clock()
@@ -35,8 +35,10 @@ class App:
                 self.screenManager.processEvents(event)
 
             self.manager.update(time_delta)
+            self.screenManager.update(time_delta)
             self.windows.fill((40, 40, 40)) # Manda a rellenar toda la ventana con un color
             self.manager.draw_ui(self.windows) # Manda a dibuja los elementos de la interfaz
+            self.screenManager.draw(self.windows) # Manda a dibujar la pantalla actual
             py.display.update() # Ejecuta todos los mandados
 
 if __name__ == '__main__':
