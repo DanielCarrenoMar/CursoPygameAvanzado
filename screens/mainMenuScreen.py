@@ -8,16 +8,19 @@ from screens.ScreenList import ScreenList
 class MainMenuScreen(Screen):
     def __init__(self, uiManager: pyui.UIManager, screenManager: ScreenManager):
         self.screenManager = screenManager
-        self.boton_ir_acerca = UIButton(relative_rect=py.Rect((400, 250), (200, 50)),
+        self.boton_ir_acerca = UIButton(relative_rect=py.Rect((0, 100), (400, 100)),
+            command=lambda: self.screenManager.show(ScreenList.GAME),
+            anchors={'centerx': 'centerx', 'top': 'top'},
             text='Ir a Juego',
             manager=uiManager)
-        self.titulo = UILabel(relative_rect=py.Rect((350, 150), (300, 50)),
+        self.tituloLabel = UILabel(
+            relative_rect=py.Rect((0, 0), (300, 50)),
             text='Página de Inicio',
+            anchors={'centerx': 'centerx', 'top': 'top'},
             manager=uiManager)
 
     def processEvents(self, event:py.event.Event):
-        if event.type == pyui.UI_BUTTON_PRESSED and event.ui_element == self.boton_ir_acerca:
-            self.screenManager.show(ScreenList.GAME)
+        pass
 
     def update(self, time_delta: int):
         pass
@@ -27,4 +30,4 @@ class MainMenuScreen(Screen):
 
     def destroy(self):
         self.boton_ir_acerca.kill()
-        self.titulo.kill()
+        self.tituloLabel.kill()
