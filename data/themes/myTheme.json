@@ -1,0 +1,47 @@
+{
+    "label": {
+        "font": {
+            "name": "montserrat",
+            "size": "12",
+            "bold": "0",
+            "italic": "0",
+            "regular_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Regular.ttf"
+            },
+            "bold_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Bold.ttf"
+            },
+            "italic_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Italic.ttf"
+            }
+        }
+    },
+    "button": {
+        "font": {
+            "name": "montserrat",
+            "size": "14",
+            "bold": "1",
+            "italic": "0",
+            "regular_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Regular.ttf"
+            },
+            "bold_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Bold.ttf"
+            },
+            "italic_resource": {
+                "package": "data.fonts",
+                "resource": "Montserrat-Italic.ttf"
+            }
+        },
+        "colours": {
+            "normal_bg": "#f0f0f0",
+            "normal_border": "#cccccc",
+            "normal_text": "#333333"
+        }
+    }
+}

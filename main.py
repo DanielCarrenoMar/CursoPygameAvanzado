@@ -14,7 +14,8 @@ class App:
         py.display.set_caption('Curso Pygame Avanzado')
 
         self.clock = py.time.Clock()
-        self.manager = pyui.UIManager((1024, 600))
+        theme = "data\\themes\\myTheme.json"
+        self.manager = pyui.UIManager((1024, 600), theme)
         self.screenManager = ScreenManager(self.manager)
 
         self.screenManager.addScreen(ScreenList.MAIN_MENU, MainMenuScreen)

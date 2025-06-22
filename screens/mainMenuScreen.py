@@ -1,4 +1,4 @@
-from pygame_gui.elements import UIButton, UILabel
+from pygame_gui.elements import UIButton, UILabel, UIImage
 import pygame as py
 import pygame_gui as pyui
 
@@ -18,6 +18,12 @@ class MainMenuScreen(Screen):
             text='Página de Inicio',
             anchors={'centerx': 'centerx', 'top': 'top'},
             manager=uiManager)
+        self.logo_image = UIImage(
+            relative_rect=py.Rect((0, 400), (200, 100)),
+            image_surface=py.image.load("data\\images\\space\\space_1.jpg"),
+            manager=uiManager,
+            anchors={'centerx': 'centerx', 'top': 'top'}
+        )
 
     def processEvents(self, event:py.event.Event):
         pass
