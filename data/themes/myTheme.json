@@ -43,5 +43,12 @@
             "normal_border": "#cccccc",
             "normal_text": "#333333"
         }
+    },
+    "#butonID": {
+        "colours": {
+            "normal_bg": "#f0f031",
+            "normal_border": "#cccccc",
+            "normal_text": "#444444"
+        }
     }
 }
